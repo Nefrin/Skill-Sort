@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+#content{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-content: stretch;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/** Navigation ********************************************/
+nav{
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 10px gray;
+}
+
+nav > h1 {
+    margin: 10px;
+}
+
+/** Main Content ********************************************/
+main{
+    flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+main > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    height: 40vmin;
+    width: 40vmin;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px lightgray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    container-type: inline-size;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.option > span {
+    margin: 30px;
+    font-size: 15cqw;
+}
+
+
+/** footer ********************************************/
+footer{
+    background-color: lightgray;
+    box-shadow: 0 -1px 5px gray;
+}
+
+footer > p {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
