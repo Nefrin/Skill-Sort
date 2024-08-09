@@ -8,7 +8,6 @@ class UIController
         this.left_callback = function (e) { console.log("left default"); };
         this.right_callback = function (e) { console.log("right default"); };
 
-        console.log("constructor")
         this.left_button = document.getElementById("left_option");
         this.left_button_text = document.getElementById("left_option_text");
         this.left_button.addEventListener("click", this.left_callback);
@@ -40,9 +39,5 @@ class UIController
 var uiController;
 
 window.onload = function (e) {
-    console.log("starting");
     uiController = new UIController;
-
-    uiController.set_left_text("133");
-    uiController.set_right_text("454");
 }
