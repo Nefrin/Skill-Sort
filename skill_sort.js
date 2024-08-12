@@ -1,4 +1,4 @@
-class FileProcessor{
+class FileInputHandler{
     constructor(){
         this.file = new File([], "none");
         this.file_content = "";
@@ -39,10 +39,10 @@ class FileProcessor{
 
 }
 
-var fileProcessor;
+var fileInputHandler;
 
 window.onload = function (e) 
 {
-    fileProcessor = new FileProcessor();
+    fileInputHandler = new FileInputHandler();
 
 }
