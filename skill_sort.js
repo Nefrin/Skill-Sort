@@ -39,10 +39,41 @@ class FileInputHandler{
 
 }
 
+/**
+ * @param text the text that represents the actual item
+ * @param tree array of path elements that lead to the item 
+ */
+class ListItem{
+    constructor(text, tree){
+        this.text = text;
+        this.tree = tree;
+    }
+}
+
+class FileParser {
+    parseFile(data){
+        let items = Array();
+        const lines = data.split("\n");
+        for(var line in lines){
+            if(lines[line].trim().length > 0){
+                const datum = lines[line].trim();
+                items.push(new ListItem(datum, [datum]));
+            }
+        }
+        return items;
+    }
+}
+
 var fileInputHandler;
 
 window.onload = function (e) 
 {
     fileInputHandler = new FileInputHandler();
+    fileInputHandler.set_file_changed_callback(function(e){
+        console.log("log");
+        const parser = new FileParser();
+        let data = parser.parseFile(fileInputHandler.get_file_contents());
+        console.log(data);
+    });
 
 }
